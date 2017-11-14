@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
 void buscarNumeroEnVector(int n,int vec[]){
-	
+
 }
 float leerYPromedioVector(int n, int vec[]){
-	
+
 }
 void leerYMostrarVector(int n,int vec[]){
-	
+
 }
 
 
@@ -22,43 +22,45 @@ void matrices(){
 	scanf("%i",&op);
 	while(op!=0){
 		switch(op){
-			case 1: 
+			case 1:
 				//leerYMostrarMatriz();
 			break;
-			case 2: 
+			case 2:
 				//matrizTriangular();
 			break;
-			case 3: 
+			case 3:
 				//ordenarMatrizAscendente();
 			break;
 		}
-	}			
+	}
 }
 
 void vectores(){
 	int op, n, j;
 	printf("Ingrese el tamaño del vector ");
-	scanf("%i",&n);
+	scanf("%i", &n);
 	int vec[n];
+	printf("%d", n);
+
 	printf("Ingrese una opción \n1.Leer y mostrar vector \n2.Leer y calcular promedio del vector \n3.Buscar número en vector\n");
-	scanf("%i",&op);
-	while(op!=0){
-		switch(op){
-			case 1: 
+	scanf("%i", &op);
+
+
+    switch(op){
+        case 1:
 				//leerYMostrarVector(n, vec);
-				for(j=0; j<n; j++){	
-				printf("Ingrese número en la posición %d", j);
-				//scanf("%d",&vec[j]);
-				}
+            for(j = 0; j < n; j++){
+                printf("Ingrese número en la posición %d\n", j);
+                scanf("%d",&vec[j]);
+            }
+            break;
+        case 2:
+            leerYPromedioVector(n,vec);
+            break;
+        case 3:
+            buscarNumeroEnVector(n,vec);
 			break;
-			case 2: 
-				leerYPromedioVector(n,vec);
-			break;
-			case 3:
-				buscarNumeroEnVector(n,vec);
-			break;
-		}
-	}			
+    }
 }
 
 void series(){
@@ -67,14 +69,14 @@ void series(){
 	scanf("%i",&op);
 	while(op!=0){
 		switch(op){
-			case 1: 
+			case 1:
 				//serieNegativos();
 			break;
-			case 2: 
+			case 2:
 				//fibonacci();
 			break;
 		}
-	}			
+	}
 }
 
 void calculos(){
@@ -83,17 +85,17 @@ void calculos(){
 	scanf("%i",&op);
 	while(op!=0){
 		switch(op){
-			case 1: 
+			case 1:
 				//valorAbsoluto();
 			break;
-			case 2: 
+			case 2:
 				//kilogramosLibras();
 			break;
-			case 3: 
+			case 3:
 				//hipotenusa();
 			break;
 		}
-	}		
+	}
 }
 
 main(){
@@ -103,19 +105,19 @@ main(){
 	scanf("%i",&op);
 	while(op!=0){
 		switch(op){
-			case 1: 
+			case 1:
 				calculos();
 			break;
-			case 2: 
+			case 2:
 				series();
 			break;
-			case 3: 
+			case 3:
 				vectores();
-			break;
-			case 4: 
+                break;
+			case 4:
 				matrices();
 			break;
 		}
-	}	
+	}
 }
 
